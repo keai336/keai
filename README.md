@@ -1,4 +1,2 @@
-# mychlashrule
-how to use git?
-is there anyone willing to teach me?
-it's namely you @grin
+# My clash rules
+自用clash rule仓库
