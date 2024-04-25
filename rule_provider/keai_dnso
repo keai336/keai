@@ -1,0 +1,6 @@
+payload:
+  - IP-CIDR,1.1.1.1/24
+  - IP-CIDR,8.8.8.8/24
+  - IP-CIDR,9.9.9.9/24
+  - PROCESS-NAME,AdGuardHome
+  - PROCESS-NAME,mosdns

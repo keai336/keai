@@ -1,0 +1,7 @@
+payload:
+  # > KKBOX
+  - DOMAIN-SUFFIX,zjcdn.com
+  - DOMAIN-KEYWORD,douyin
+  - IP-CIDR,223.5.5.5/24
+  - IP-CIDR,119.29.29.29/24
+  - DOMAIN-KEYWORD,wechat
