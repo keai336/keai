@@ -1,0 +1,487 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+allow-lan: true
+mode: rule
+log-level: info
+dns:
+  enable: true
+  ipv6: false
+  listen: 0.0.0.0:7874
+  use-hosts: true
+  default-nameserver:
+  - 119.29.29.29
+  - 8.8.8.8
+  - 1.1.1.1
+  - 114.114.114.114
+  - 223.5.5.5
+  nameserver:
+  - 223.5.5.5
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+  - '*.lan'
+  - '*.localdomain'
+  - '*.example'
+  - '*.invalid'
+  - '*.localhost'
+  - '*.test'
+  - '*.local'
+  - '*.home.arpa'
+  - time.*.com
+  - time.*.gov
+  - time.*.edu.cn
+  - time.*.apple.com
+  - time1.*.com
+  - time2.*.com
+  - time3.*.com
+  - time4.*.com
+  - time5.*.com
+  - time6.*.com
+  - time7.*.com
+  - ntp.*.com
+  - ntp1.*.com
+  - ntp2.*.com
+  - ntp3.*.com
+  - ntp4.*.com
+  - ntp5.*.com
+  - ntp6.*.com
+  - ntp7.*.com
+  - '*.time.edu.cn'
+  - '*.ntp.org.cn'
+  - +.pool.ntp.org
+  - time1.cloud.tencent.com
+  - stun.*.*
+  - stun.*.*.*
+  - swscan.apple.com
+  - mesu.apple.com
+  - music.163.com
+  - '*.music.163.com'
+  - '*.126.net'
+  - musicapi.taihe.com
+  - music.taihe.com
+  - songsearch.kugou.com
+  - trackercdn.kugou.com
+  - '*.kuwo.cn'
+  - api-jooxtt.sanook.com
+  - api.joox.com
+  - y.qq.com
+  - '*.y.qq.com'
+  - streamoc.music.tc.qq.com
+  - mobileoc.music.tc.qq.com
+  - isure.stream.qqmusic.qq.com
+  - dl.stream.qqmusic.qq.com
+  - aqqmusic.tc.qq.com
+  - amobile.music.tc.qq.com
+  - localhost.ptlogin2.qq.com
+  - '*.msftconnecttest.com'
+  - '*.msftncsi.com'
+  - '*.xiami.com'
+  - '*.music.migu.cn'
+  - music.migu.cn
+  - +.wotgame.cn
+  - +.wggames.cn
+  - +.wowsgame.cn
+  - +.wargaming.net
+  - '*.*.*.srv.nintendo.net'
+  - '*.*.stun.playstation.net'
+  - xbox.*.*.microsoft.com
+  - '*.*.xboxlive.com'
+  - '*.ipv6.microsoft.com'
+  - teredo.*.*.*
+  - teredo.*.*
+  - speedtest.cros.wr.pvp.net
+  - +.jjvip8.com
+  - www.douyu.com
+  - activityapi.huya.com
+  - activityapi.huya.com.w.cdngslb.com
+  - www.bilibili.com
+  - api.bilibili.com
+  - a.w.bilicdn1.com
+  - time-ios.apple.com
+  - joox.com
+  - +.msftconnecttest.com
+  - +.msftncsi.com
+  - localhost.sec.qq.com
+  - +.qq.com
+  - +.tencent.com
+  - +.srv.nintendo.net
+  - '*.n.n.srv.nintendo.net'
+  - +.cdn.nintendo.net
+  - +.stun.playstation.net
+  - xbox.*.microsoft.com
+  - xnotify.xboxlive.com
+  - +.battlenet.com.cn
+  - proxy.golang.org
+  - +.stun.*.*
+  - +.stun.*.*.*
+  - +.stun.*.*.*.*
+  - +.stun.*.*.*.*.*
+  - heartbeat.belkin.com
+  - '*.linksys.com'
+  - '*.linksyssmartwifi.com'
+  - '*.router.asus.com'
+  - swquery.apple.com
+  - swdownload.apple.com
+  - swcdn.apple.com
+  - swdist.apple.com
+  - lens.l.google.com
+  - stun.l.google.com
+  - na.b.g-tun.com
+  - +.nflxvideo.net
+  - '*.square-enix.com'
+  - '*.finalfantasyxiv.com'
+  - '*.ffxiv.com'
+  - '*.ff14.sdo.com'
+  - ff.dorado.sdo.com
+  - '*.mcdn.bilivideo.cn'
+  - +.media.dssott.com
+  - shark007.net
+  - Mijia Cloud
+  - +.cmbchina.com
+  - +.cmbimg.com
+  - local.adguard.org
+  - +.sandai.net
+  - +.n0808.com
+  - +.uu.163.com
+  - ps.res.netease.com
+  - services.googleapis.cn
+  enhanced-mode: fake-ip
+  fallback:
+  - 8.8.8.8
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+    - 0.0.0.0/8
+    - 10.0.0.0/8
+    - 100.64.0.0/10
+    - 127.0.0.0/8
+    - 169.254.0.0/16
+    - 172.16.0.0/12
+    - 192.0.0.0/24
+    - 192.0.2.0/24
+    - 192.88.99.0/24
+    - 192.168.0.0/16
+    - 198.18.0.0/15
+    - 198.51.100.0/24
+    - 203.0.113.0/24
+    - 224.0.0.0/4
+    - 240.0.0.0/4
+    - 255.255.255.255/32
+    domain:
+    - +.google.com
+    - +.facebook.com
+    - +.youtube.com
+    - +.githubusercontent.com
+    - +.googlevideo.com
+    - +.msftconnecttest.com
+    - +.msftncsi.com
+external-controller: 0.0.0.0:9090
+clash-for-android:
+  append-system-dns: false
+proxy-groups:
+- name: Final
+  type: select
+  disable-udp: false
+  proxies:
+  - DIRECT
+  - REJECT
+  use:
+  - mesl
+  - planb
+  - planc
+- name: 低倍率结点
+  type: select
+  disable-udp: false
+  use:
+  - mesl
+  - planb
+  - planc
+  filter: (?<=0.{2})X
+- name: EMBY
+  type: select
+  disable-udp: false
+  proxies:
+  - Final
+  - 低倍率结点
+  - DIRECT
+  use:
+  - mesl
+  - planb
+  - planc
+  filter: ^$
+- name: Steam
+  type: select
+  disable-udp: false
+  proxies:
+  - Final
+  - 香港
+  - 日本
+  - 新加坡
+  - 美国
+  - 韩国
+  - 台湾
+  - 英国
+  - 其他地区国家
+  - 低倍率结点
+  - DIRECT
+  use:
+  - mesl
+  - planb
+  - planc
+  filter: ^$
+- name: 香港
+  type: select
+  disable-udp: false
+  use:
+  - mesl
+  - planb
+  - planc
+  filter: HK|Hong\s?Kong|香港
+- name: 日本
+  type: select
+  disable-udp: false
+  use:
+  - mesl
+  - planb
+  - planc
+  filter: JP|Japan|日本
+- name: 新加坡
+  type: select
+  disable-udp: false
+  use:
+  - mesl
+  - planb
+  - planc
+  filter: SG|Singapore|新加坡
+- name: 美国
+  type: select
+  disable-udp: false
+  use:
+  - mesl
+  - planb
+  - planc
+  filter: US|United\s?States|USA|美国
+- name: 韩国
+  type: select
+  disable-udp: false
+  use:
+  - mesl
+  - planb
+  - planc
+  filter: KR|Korea|South\s?Korea|Republic\s?of\s?Korea|韩国
+- name: 台湾
+  type: select
+  disable-udp: false
+  use:
+  - mesl
+  - planb
+  - planc
+  filter: TW|台湾|Taiwan
+- name: 英国
+  type: select
+  disable-udp: false
+  use:
+  - mesl
+  - planb
+  - planc
+  filter: UK|United\s?Kingdom|英国
+- name: 其他地区国家
+  type: select
+  disable-udp: false
+  use:
+  - mesl
+  - planb
+  - planc
+  filter: ^(?!.*(HK|Hong ?Kong|香港|JP|Japan|日本|SG|Singapore|新加坡|KR|Korea|South ?Korea|Republic
+    ?of ?Korea|韩国|US|United ?States|USA|美国|UK|United ?Kingdom|英国|TW|台湾|Taiwan)).*$
+- name: DNS
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  disable-udp: false
+  proxies:
+  - DIRECT
+  - REJECT
+  use:
+  - mesl
+  - planb
+  - planc
+rules:
+- DST-PORT,7895,REJECT
+- DST-PORT,7892,REJECT
+- IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+- RULE-SET,Google,Final
+- RULE-SET,Telegram(By ACL4SSR),Final
+- RULE-SET,YouTube Music,Final
+- RULE-SET,YouTube(By lhie1),Final
+- RULE-SET,YouTube(By ACL4SSR),Final
+- RULE-SET,Discord,Final
+- RULE-SET,Spotify(By lhie1),美国
+- RULE-SET,Bilibili,DIRECT
+- RULE-SET,国内流媒体合集,DIRECT
+- RULE-SET,国内域名白名单,DIRECT
+- RULE-SET,emby,EMBY
+- RULE-SET,DNS,DNS
+- RULE-SET,direct,DIRECT
+- RULE-SET,proxy,Final
+- RULE-SET,openai,美国
+- RULE-SET,bing,美国
+- RULE-SET,国内IP白名单,DIRECT
+- MATCH,Final
+proxy-providers:
+  mesl:
+    type: http
+    path: ./proxy_provider/mesl.yaml
+    url: 
+      https://911tg3rs.com/api/v1/client/subscribe?token=1b2bbf02dcccacf428d3ad41573ad16e
+    interval: 3600
+    health-check:
+      enable: true
+      url: http://cp.cloudflare.com/generate_204
+      interval: 300
+  planb:
+    type: http
+    path: ./proxy_provider/planb.yaml
+    url: https://mojie.app/api/v1/client/subscribe?token=11df463f02ddc218cc19052c51f1c7d0
+    interval: 3600
+    health-check:
+      enable: true
+      url: http://cp.cloudflare.com/generate_204
+      interval: 300
+  planc:
+    type: http
+    path: ./proxy_provider/planc.yaml
+    url: 
+      https://misaka0501.xn--wqr30o34q.xn--io0a7i/api/v1/client/subscribe?token=97880e985bb425ec103ef1840330274d
+    interval: 3600
+    health-check:
+      enable: true
+      url: http://cp.cloudflare.com/generate_204
+      interval: 300
+bind-address: '*'
+sniffer:
+  enable: true
+  parse-pure-ip: true
+profile:
+  store-selected: true
+  store-fake-ip: true
+rule-providers:
+  Google:
+    type: http
+    behavior: classical
+    path: ./rule_provider/Google.yaml
+    url: 
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Google.yaml
+    interval: 86400
+  Telegram(By ACL4SSR):
+    type: http
+    behavior: classical
+    path: ./rule_provider/Telegram-ACL4SSR.yaml
+    url: 
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Telegram.yaml
+    interval: 86400
+  YouTube Music:
+    type: http
+    behavior: classical
+    path: ./rule_provider/YouTube Music.yaml
+    url: 
+      https://raw.githubusercontent.com/dler-io/Rules/master/Clash/Provider/Media/YouTube
+      Music.yaml
+    interval: 86400
+  YouTube(By lhie1):
+    type: http
+    behavior: classical
+    path: ./rule_provider/YouTube-lhie1.yaml
+    url: 
+      https://raw.githubusercontent.com/dler-io/Rules/master/Clash/Provider/Media/YouTube.yaml
+    interval: 86400
+  YouTube(By ACL4SSR):
+    type: http
+    behavior: classical
+    path: ./rule_provider/YouTube-ACL4SSR.yaml
+    url: 
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/YouTube.yaml
+    interval: 86400
+  Discord:
+    type: http
+    behavior: classical
+    path: ./rule_provider/Discord.yaml
+    url: 
+      https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/Game/Discord.yaml
+    interval: 86400
+  Spotify(By lhie1):
+    type: http
+    behavior: classical
+    path: ./rule_provider/Spotify-lhie1.yaml
+    url: 
+      https://raw.githubusercontent.com/dler-io/Rules/master/Clash/Provider/Media/Spotify.yaml
+    interval: 86400
+  Bilibili:
+    type: http
+    behavior: classical
+    path: ./rule_provider/Bilibili.yaml
+    url: 
+      https://raw.githubusercontent.com/dler-io/Rules/master/Clash/Provider/Media/Bilibili.yaml
+    interval: 86400
+  国内流媒体合集:
+    type: http
+    behavior: classical
+    path: ./rule_provider/StreamingCN.yaml
+    url: 
+      https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/StreamingMedia/StreamingCN.yaml
+    interval: 86400
+  国内域名白名单:
+    type: http
+    behavior: classical
+    path: ./rule_provider/China.yaml
+    url: 
+      https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/China.yaml
+    interval: 86400
+  国内IP白名单:
+    type: http
+    behavior: ipcidr
+    path: ./rule_provider/ChinaIP.yaml
+    url: 
+      https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/ChinaIP.yaml
+    interval: 86400
+  emby:
+    type: file
+    behavior: classical
+    path: ./rule_provider/keai_emby
+    url: https://raw.githubusercontent.com/keai336/keai/main/rule_provider/keai_emby
+    format: yaml
+  DNS:
+    type: file
+    behavior: classical
+    path: ./rule_provider/keai_dnso
+    url: https://raw.githubusercontent.com/keai336/keai/main/rule_provider/keai_dnso
+    format: yaml
+  direct:
+    type: file
+    behavior: classical
+    path: ./rule_provider/keai_direct
+    url: https://raw.githubusercontent.com/keai336/keai/main/rule_provider/keai_direct
+    format: yaml
+  proxy:
+    type: file
+    behavior: classical
+    path: ./rule_provider/keai_proxy
+    url: https://raw.githubusercontent.com/keai336/keai/main/rule_provider/keai_proxy
+    format: yaml
+  openai:
+    type: http
+    behavior: classical
+    path: ./rule_provider/openai.yaml
+    format: text
+    url: 
+      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/OpenAi.list
+    interval: 86400
+  bing:
+    type: http
+    behavior: classical
+    path: ./rule_provider/bing.yaml
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Bing.list
+    interval: 86400
