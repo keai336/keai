@@ -240,6 +240,6 @@ rule-providers:
     type: http
     behavior: classical
     path: ./rule_provider/keai_emby
-    url: https://raw.githubusercontent.com/keai336/keai/main/rule_provider/keai_emby
+    url: http://sdu6w9hw7.hd-bkt.clouddn.com/keai_emby
     format: yaml
 
