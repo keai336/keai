@@ -196,10 +196,7 @@ rules:
 - DST-PORT,7895,REJECT
 - DST-PORT,7892,REJECT
 - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
-- RULE-SET,国内流媒体合集,DIRECT
-- RULE-SET,国内域名白名单,DIRECT
 - RULE-SET,emby,EMBY
-- RULE-SET,国内IP白名单,DIRECT
 - MATCH,DIRECT
 proxy-providers:
   mesl:
@@ -239,34 +236,6 @@ profile:
   store-selected: true
   store-fake-ip: true
 rule-providers:
-  Bilibili:
-    type: http
-    behavior: classical
-    path: ./rule_provider/Bilibili.yaml
-    url: 
-      https://raw.githubusercontent.com/dler-io/Rules/master/Clash/Provider/Media/Bilibili.yaml
-    interval: 86400
-  国内流媒体合集:
-    type: http
-    behavior: classical
-    path: ./rule_provider/StreamingCN.yaml
-    url: 
-      https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/StreamingMedia/StreamingCN.yaml
-    interval: 86400
-  国内域名白名单:
-    type: http
-    behavior: classical
-    path: ./rule_provider/China.yaml
-    url: 
-      https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/China.yaml
-    interval: 86400
-  国内IP白名单:
-    type: http
-    behavior: ipcidr
-    path: ./rule_provider/ChinaIP.yaml
-    url: 
-      https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/ChinaIP.yaml
-    interval: 86400
   emby:
     type: http
     behavior: classical
