@@ -182,25 +182,16 @@ external-controller: 0.0.0.0:9090
 clash-for-android:
   append-system-dns: false
 proxy-groups:
-- name: Final
-  type: select
-  disable-udp: false
-  use:
-  - mesl
-  - planb
-  - planc
-  filter: (?<=0.{2})X
 - name: EMBY
   type: select
   disable-udp: false
   proxies:
-  - Final
   - DIRECT
   use:
   - mesl
   - planb
   - planc
-  filter: ^$
+  filter: (?<=0.{2})X
 rules:
 - DST-PORT,7895,REJECT
 - DST-PORT,7892,REJECT
@@ -209,7 +200,7 @@ rules:
 - RULE-SET,国内域名白名单,DIRECT
 - RULE-SET,emby,EMBY
 - RULE-SET,国内IP白名单,DIRECT
-- MATCH,Final
+- MATCH,DIRECT
 proxy-providers:
   mesl:
     type: http
